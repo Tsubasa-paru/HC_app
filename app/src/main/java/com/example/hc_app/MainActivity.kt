@@ -19,6 +19,10 @@ import androidx.health.connect.client.records.StepsRecord
 import androidx.health.connect.client.records.HeartRateRecord
 import android.content.Intent
 import android.net.Uri
+import java.time.Duration
+
+import java.time.Instant
+import java.time.ZoneId
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,6 +89,13 @@ class MainActivity : ComponentActivity() {
             requestPermissions.launch(PERMISSIONS)
         }
     }
+    val stepsRecord = StepsRecord(
+        count = 120,
+        startTime = Instant.now(),
+        endTime = Instant.now().plus(Duration.ofSeconds(10)),
+        startZoneOffset = ZoneId.of("Asia/Tokyo").rules.getOffset(Instant.now()),
+        endZoneOffset = ZoneId.of("Asia/Tokyo").rules.getOffset(Instant.now())
+    )
 }
 
 @Composable

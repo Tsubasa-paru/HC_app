@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -69,4 +70,15 @@ dependencies {
 
     // Use to implement health connects
     implementation("androidx.health.connect:connect-client:1.0.0-alpha11")
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    // Lifecycle runtime
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    // Annotation processor
+    kapt("androidx.lifecycle:lifecycle-compiler:2.3.1")
+    // If you use Java language, use annotationProcessor instead of kapt
+    // annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.3.1'
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.1")
 }

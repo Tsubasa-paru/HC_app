@@ -81,4 +81,7 @@ dependencies {
     // If you use Java language, use annotationProcessor instead of kapt
     // annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.3.1'
     implementation("androidx.compose.runtime:runtime-livedata:1.6.1")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9") // Use the latest version
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0")
 }

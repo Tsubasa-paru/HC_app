@@ -84,4 +84,8 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9") // Use the latest version
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0")
+
+    implementation("androidx.compose.material:material:1.6.1")
+
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
 }
